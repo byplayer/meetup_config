@@ -5,7 +5,7 @@ class Meetup
   def self.load(path)
     fail "config file not found: #{path}" unless File.exist?(path)
 
-    mt = Meetup.new
+    mt = new
     File.open(path, 'r') do |file|
       mt.instance_eval(File.read(path), path)
     end
