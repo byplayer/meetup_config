@@ -13,6 +13,8 @@ class Meetup
     mt
   end
 
+  private
+
   def meetup
     yield self
   end
